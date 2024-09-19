@@ -1,0 +1,28 @@
+import java.util.*;
+
+// find the sum of even or odd no
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the start: ");
+        // int s = sc.nextInt();
+        System.out.print("enter the end: ");
+        int e = sc.nextInt();
+        int n;
+        int rem;
+        int sum = 0;
+
+        for (int i = 1; i < e; i++) {
+            n = i;
+            for (; n > 0;) {
+                rem = n % 10;
+                sum += rem * rem * rem;
+                n /= 10;
+            }
+            if (sum == i) {
+                System.out.println(i);
+            }
+            sum = 0;
+        }
+    }
+}
