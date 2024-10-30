@@ -1,0 +1,43 @@
+// display a num in words 
+class Main {
+    public static void main(String[] args) {
+        int n = 1700;
+        int rem ;
+        String str = "";
+        while (n>0) {
+            rem = n%10;
+            n = n/10;
+            str = str+rem;
+
+        }
+        int c ;
+        for (int i = str.length()-1; i >= 0; i--) {
+            c = str.charAt(i);
+            switch (c) {
+                case '1':
+                    System.out.println("one");
+                    break;
+                
+                    case 2:
+                    System.out.println("two");
+                    break;
+
+                    case 3:
+                    System.out.println("three");
+                    break;
+
+                    case '7':
+                    System.out.println("seven");
+                    break;
+
+                    case '0':
+                    System.out.println("zero");
+                    break;
+
+                default:
+                System.out.println("invalid no");
+                    break;
+            }
+        }
+    }
+}
